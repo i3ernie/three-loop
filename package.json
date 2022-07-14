@@ -1,0 +1,17 @@
+{
+    "name": "three.loop",
+    "version": "0.122.71301",
+    "dependencies": {
+        "three": "^0.142"
+    },
+    "devDependencies": {
+        "gulp": "latest",
+        "gulp-better-rollup": "latest",
+        "gulp-rollup": "latest",
+        "gulp-sourcemaps": "latest",
+        "gulp-uglify": "latest",
+        "jshint": "latest",
+        "lodash": "latest",
+        "rollup": "latest"
+    }
+}
