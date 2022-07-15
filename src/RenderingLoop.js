@@ -8,6 +8,7 @@ class RenderingLoop extends Loop {
     {
         super();
 
+        this._isRunning = false;
         this.renderer = renderer;
 
         this.maxDelta	= 0.2;	
@@ -20,39 +21,40 @@ class RenderingLoop extends Loop {
          * @returns {undefined}
          */
         this.start = function( obj ) {
-            console.assert( this.isRunning === false );
+            console.assert( this._isRunning === false );
 
             const scope = this;
             this.add(function(){
                 scope.renderer.render( obj.scene, obj.camera );
             });
             this.renderer.setAnimationLoop( this.animation );
-            this.isRunning = true;
+            this._isRunning = true;
             
             return this;
         };
-    
-        /**
-         * 
-         * @returns {Boolean}
-         */
-        this.isRunning = function() {
-            return !!this.isRunning;
-        };
-    
-        /**
-         * 
-         * @returns {undefined}
-         */
-        this.stop = function() {
+       
+    }
 
-            if( !this.isRunning ) { 
-                return
-            };
-            this.renderer.setAnimationLoop( null );
-            this.isRunning = false;
+    /**
+     * 
+     * @returns {undefined}
+     */
+    stop () {
+
+        if( !this._isRunning ) { 
+            return
         };
+        this.renderer.setAnimationLoop( null );
+        this._isRunning = false;
+    }
+
+    /**
+     * 
+     * @returns {Boolean}
+     */
+    isRunning () {
+        return !!this.isRunning;
     }
 };
 
-export {RenderingLoop, Loop };
+export { RenderingLoop, Loop };
