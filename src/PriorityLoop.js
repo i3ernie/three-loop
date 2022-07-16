@@ -1,4 +1,4 @@
-define(["./Loop"], function( Loop ){
+import {Loop} from "./Loop";
 
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -34,6 +34,4 @@ PriorityLoop.prototype.update	= function( delta ){
 	}
 };
 
-return PriorityLoop;
-
-});
+export {PriorityLoop}

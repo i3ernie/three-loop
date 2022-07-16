@@ -40,4 +40,4 @@
         });
     };
 
-export default Loop;
+export {Loop};

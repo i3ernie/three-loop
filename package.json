@@ -9,6 +9,8 @@
         "gulp-better-rollup": "latest",
         "gulp-rollup": "latest",
         "gulp-sourcemaps": "latest",
+        "rollup-plugin-buble": "latest",
+        "rollup-plugin-node-resolve": "latest",
         "gulp-uglify": "latest",
         "jshint": "latest",
         "lodash": "latest",
