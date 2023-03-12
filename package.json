@@ -1,8 +1,8 @@
 {
     "name": "three.loop",
-    "version": "0.122.71301",
+    "version": "0.150.31201",
     "dependencies": {
-        "three": "^0.142"
+        "three": "^0.150"
     },
     "devDependencies": {
         "gulp": "latest",
